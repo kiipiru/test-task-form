@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAccountsStore } from "../stores/AccountStore";
 import UserEntry from "./UserEntry.vue";
-import question-icon from "@assets/question.png";
+import questionIcon from "@assets/question.png";
 
 interface Props {
   formTitle: string;
@@ -21,7 +21,7 @@ const labels = ["Метки", "Тип записи", "Логин", "Пароль
     <button class="add-user-button" @click="accountStore.addAccount">+</button>
   </div>
   <div class="hint">
-    <img class="question-icon" :src="question-icon" alt="Иконка подсказки" />
+    <img class="question-icon" :src="questionIcon" alt="Иконка подсказки" />
     <span>{{ hintText }}</span>
   </div>
   <div class="form-grid">

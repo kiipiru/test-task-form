@@ -3,8 +3,7 @@ import { computed, ref } from "vue";
 import CustomSelect from "./CustomSelect.vue";
 import { UserAccount } from "../types/types";
 import { useAccountsStore } from "../stores/AccountStore";
-import trash-icon from "@assets/trash.png";
-console.log(trash-icon);
+import trashIcon from "@assets/trash.png";
 
 interface Props {
   account: UserAccount;
@@ -86,7 +85,7 @@ function handleBlur() {
     />
     <template v-if="isLocal">
       <input
-        :class="{ has-error: hasLoginErrors }"
+        :class="{ 'has-error': hasLoginErrors }"
         v-model="login"
         placeholder="Значение"
         maxlength="100"
@@ -96,7 +95,7 @@ function handleBlur() {
         <div class="password-input-container">
           <input
             class="password-input"
-            :class="{ has-error: hasPasswordErrors }"
+            :class="{ 'has-error': hasPasswordErrors }"
             maxlength="100"
             v-model="passwordInput"
             :type="showPassword ? 'text' : 'password'"
@@ -116,7 +115,7 @@ function handleBlur() {
         >
           <img
             class="trash-icon"
-            :src="trash-icon"
+            :src="trashIcon"
             alt="Иконка удаления записи"
           />
         </button>
@@ -125,7 +124,7 @@ function handleBlur() {
     <template v-else>
       <div class="login-stretched-wrapper">
         <input
-          :class="{ has-error: hasLoginErrors }"
+          :class="{ 'has-error': hasLoginErrors }"
           v-model="login"
           placeholder="Значение"
           maxlength="100"
@@ -138,7 +137,7 @@ function handleBlur() {
         >
           <img
             class="trash-icon"
-            :src="trash-icon"
+            :src="trashIcon"
             alt="Иконка удаления записи"
           />
         </button>
