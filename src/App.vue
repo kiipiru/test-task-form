@@ -1,5 +1,7 @@
 <script setup>
 import UsersForm from './components/UsersForm.vue';
+
+accountStore.loadFromStorage();
 </script>
 
 <template>

@@ -10,7 +10,6 @@ interface Props {
 
 const props = defineProps<Props>();
 const accountStore = useAccountsStore();
-accountStore.loadFromStorage();
 
 const labels = ["Метки", "Тип записи", "Логин", "Пароль"];
 </script>

@@ -24,6 +24,7 @@ export const useAccountsStore = defineStore('accounts', () => {
         password: ''
       }
       accounts.value.push(newAccount)
+      // Не сохраняем в localStorage сразу, т.к. нет логина и пароля
   }
 
   function updateAccount(id: string, data: Partial<Omit<UserAccount, 'id'>>) {
