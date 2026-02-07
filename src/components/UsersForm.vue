@@ -71,6 +71,7 @@ const labels = ["Метки", "Тип записи", "Логин", "Пароль
   column-gap: 20px;
   align-items: center;
   row-gap: 8px;
+  min-width: 1300px;
 }
 
 .form-grid .label {
